@@ -1,34 +1,35 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './index.html',
   filename: 'index.html',
-  inject: 'body'
-})
+  inject: 'body',
+});
 
 module.exports = {
-  context: __dirname + "/app",
+  context: path.join(__dirname, '/app'),
 
-  entry: "./js/app.js",
+  entry: './js/app.jsx',
 
   output: {
-    filename: "app.js",
-    path: __dirname + "/dist",
+    filename: 'app.js',
+    path: path.join(__dirname, '/dist'),
   },
 
   resolve: {
-    extensions: ['.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json'],
   },
   module: {
     loaders: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ["react-hot-loader", "babel-loader"],
-      }
-    ]
+        loaders: ['react-hot-loader', 'babel-loader'],
+      },
+    ],
   },
-  plugins: [HtmlWebpackPluginConfig]
+  plugins: [HtmlWebpackPluginConfig],
 
 };
