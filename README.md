@@ -14,7 +14,8 @@ Compile
 npm run compile
 ```
 
-Start the development server:
+Start server
+---
 ```
 npm start
 ```
