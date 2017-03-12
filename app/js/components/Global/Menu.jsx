@@ -4,7 +4,7 @@ export default class Menu extends Component {
   render() {
     return (
       <div className='Menu'>
-        Main Menu Reloaded
+        Main Menu
       </div>
     );
   }
