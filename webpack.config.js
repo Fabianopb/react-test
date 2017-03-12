@@ -11,7 +11,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 module.exports = {
   context: path.join(__dirname, '/app'),
 
-  entry: './js/app.jsx',
+  entry: './js/App.jsx',
 
   output: {
     filename: 'app.js',
